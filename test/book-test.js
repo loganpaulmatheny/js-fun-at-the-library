@@ -6,23 +6,22 @@ var {
   calculatePageCount,
   saveReview,
   writeBook,
-  editBook
+  editBook,
 } = require("../src/book.js");
 
-
 describe("book.js", function () {
-  describe("createTitle", function() {
-    it.skip("should be a function", function () {
+  describe("createTitle", function () {
+    it("should be a function", function () {
       assert.isFunction(createTitle);
     });
 
-    it.skip("should take in a title and return a modified title", function () {
+    it("should take in a title and return a modified title", function () {
       var bookIdea = createTitle("Storm's Awakening");
 
       assert.equal(bookIdea, "The Storm's Awakening");
     });
 
-    it.skip("should be able to create many modified titles", function () {
+    it("should be able to create many modified titles", function () {
       var sushiTitle = createTitle("Dancing Sushi");
       var dragonTitle = createTitle("Dragon in the Summer");
       var ghostTitle = createTitle("Teenage Ghoul");
@@ -33,7 +32,7 @@ describe("book.js", function () {
     });
   });
 
-  describe("buildMainCharacter", function() {
+  describe("buildMainCharacter", function () {
     it.skip("should be a function (comment the function back into the module.exports object in book.js)", function () {
       assert.isFunction(buildMainCharacter);
     });
@@ -52,12 +51,12 @@ describe("book.js", function () {
     });
   });
 
-  describe("saveReview", function() {
+  describe("saveReview", function () {
     it.skip("should be a function (comment the function back into the module.exports object in book.js)", function () {
       assert.isFunction(saveReview);
     });
 
-    it.skip("should be able to add reviews to an array", function() {
+    it.skip("should be able to add reviews to an array", function () {
       var reviews = [];
 
       saveReview("An astounding success", reviews);
@@ -66,17 +65,21 @@ describe("book.js", function () {
       assert.deepEqual(reviews, ["An astounding success"]);
     });
 
-    it.skip("should be able to add reviews to an array that already contains reviews", function() {
+    it.skip("should be able to add reviews to an array that already contains reviews", function () {
       var reviews = ["You won't be able to put it down"];
 
       saveReview("A page turner!", reviews);
       saveReview("An instant classic!", reviews);
 
       assert.equal(reviews.length, 3);
-      assert.deepEqual(reviews, ["You won't be able to put it down", "A page turner!", "An instant classic!"]);
+      assert.deepEqual(reviews, [
+        "You won't be able to put it down",
+        "A page turner!",
+        "An instant classic!",
+      ]);
     });
 
-    it.skip("should only add unique reviews", function() {
+    it.skip("should only add unique reviews", function () {
       var reviews = [];
 
       saveReview("I want everyone to read this book!", reviews);
@@ -84,11 +87,14 @@ describe("book.js", function () {
       saveReview("I want everyone to read this book!", reviews);
 
       assert.equal(reviews.length, 2);
-      assert.deepEqual(reviews, ["I want everyone to read this book!", "I couldn't stop reading!"]);
+      assert.deepEqual(reviews, [
+        "I want everyone to read this book!",
+        "I couldn't stop reading!",
+      ]);
     });
   });
 
-  describe("calculatePageCount", function() {
+  describe("calculatePageCount", function () {
     it.skip("should be a function (comment the function back into the module.exports object in book.js)", function () {
       assert.isFunction(calculatePageCount);
     });
@@ -108,7 +114,7 @@ describe("book.js", function () {
     });
   });
 
-  describe("writeBook", function() {
+  describe("writeBook", function () {
     it.skip("should be a function", function () {
       assert.isFunction(writeBook);
     });
@@ -136,7 +142,7 @@ describe("book.js", function () {
     });
   });
 
-  describe("editBook", function() {
+  describe("editBook", function () {
     it.skip("should be a function", function () {
       assert.isFunction(editBook);
     });
@@ -152,7 +158,6 @@ describe("book.js", function () {
 
       assert.equal(ghoulBook.pageCount, 255);
     });
-
 
     it.skip("should decrease a different book's page count to be three quarters of what it originally was", function () {
       var dragonTitle = createTitle("Dragon in the Summer");
