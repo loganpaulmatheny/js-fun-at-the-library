@@ -33,11 +33,11 @@ describe("book.js", function () {
   });
 
   describe("buildMainCharacter", function () {
-    it.skip("should be a function (comment the function back into the module.exports object in book.js)", function () {
+    it("should be a function (comment the function back into the module.exports object in book.js)", function () {
       assert.isFunction(buildMainCharacter);
     });
 
-    it.skip("should create a character object", function () {
+    it("should create a character object", function () {
       var ghoulCharacter = buildMainCharacter("Vassya", 16, "she/her");
       var bakerCharacter = buildMainCharacter("Hannah", 30, "she/her");
 
@@ -52,11 +52,11 @@ describe("book.js", function () {
   });
 
   describe("saveReview", function () {
-    it.skip("should be a function (comment the function back into the module.exports object in book.js)", function () {
+    it("should be a function (comment the function back into the module.exports object in book.js)", function () {
       assert.isFunction(saveReview);
     });
 
-    it.skip("should be able to add reviews to an array", function () {
+    it("should be able to add reviews to an array", function () {
       var reviews = [];
 
       saveReview("An astounding success", reviews);
@@ -65,7 +65,7 @@ describe("book.js", function () {
       assert.deepEqual(reviews, ["An astounding success"]);
     });
 
-    it.skip("should be able to add reviews to an array that already contains reviews", function () {
+    it("should be able to add reviews to an array that already contains reviews", function () {
       var reviews = ["You won't be able to put it down"];
 
       saveReview("A page turner!", reviews);
@@ -79,7 +79,7 @@ describe("book.js", function () {
       ]);
     });
 
-    it.skip("should only add unique reviews", function () {
+    it("should only add unique reviews", function () {
       var reviews = [];
 
       saveReview("I want everyone to read this book!", reviews);
