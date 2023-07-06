@@ -174,7 +174,7 @@ describe("library.js", function () {
   });
 
   describe("takeStock", function () {
-    it.skip("should be able to take stock of how many books are on a shelf", function () {
+    it("should be able to take stock of how many books are on a shelf", function () {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -212,7 +212,7 @@ describe("library.js", function () {
       );
     });
 
-    it.skip("should be able to count the number of books on a different shelf", function () {
+    it("should be able to count the number of books on a different shelf", function () {
       var bornACrime = {
         title: "Born a Crime",
         mainCharacter: { name: "Trevor Noah", age: 36, pronouns: "he/him" },
@@ -229,7 +229,7 @@ describe("library.js", function () {
       );
     });
 
-    it.skip("should be able to take stock of how many books are in the entire collection if a specific shelf is not specified", function () {
+    it("should be able to take stock of how many books are in the entire collection if a specific shelf is not specified", function () {
       var dracula = {
         title: "Dracula",
         mainCharacter: {

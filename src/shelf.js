@@ -34,13 +34,11 @@ function listTitles(shelf) {
 
 function searchShelf(shelf, title) {
   var found = shelf.some((book) => book.title === title);
-  console.log(found);
+  // console.log(found);
   if (found === true) {
-    console.log("Yes that book is in 📚");
+    // console.log("Yes that book is in 📚");
   } else {
-    console.log(
-      `I'm sorry it looks like that book is checked out or missing 💨`
-    );
+    // console.log`I'm sorry it looks like that book is checked out or missing 💨`();
   }
   return found;
 }
