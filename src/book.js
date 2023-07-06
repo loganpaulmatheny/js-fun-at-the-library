@@ -47,3 +47,5 @@ module.exports = {
   writeBook,
   editBook,
 };
+
+// a better way to pass all of the tests I think would be to have one function that takes in all the information that will represent the book as arguments and assign the key value pairs. But i do understand why it makes sense to separate out some of the functionality to modify parts of the book as desired.
