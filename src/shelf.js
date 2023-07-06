@@ -32,9 +32,22 @@ function listTitles(shelf) {
 
 // The best way I can think of to solve the 'join' problem, which is that you need the titles of the objects all in a string, but you can't have a comma on the last index (ergo you can't just do string interpolation easily) is to put all the titles in their own array and then join them.
 
+function searchShelf(shelf, title) {
+  var found = shelf.some((book) => book.title === title);
+  console.log(found);
+  if (found === true) {
+    console.log("Yes that book is in 📚");
+  } else {
+    console.log(
+      `I'm sorry it looks like that book is checked out or missing 💨`
+    );
+  }
+  return found;
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf,
 };
