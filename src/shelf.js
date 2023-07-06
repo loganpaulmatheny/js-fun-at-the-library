@@ -44,10 +44,7 @@ function searchShelf(shelf, title) {
   }
   return found;
 }
-<<<<<<< HEAD
 // My function was not working earlier because I was also trying to print the titles from the objects within the array. However, if no title exists there will be nothing to print - this was causing my function to have irregular behavior.
-=======
->>>>>>> 98558510067a266b97180d28e227ee1d23b746d3
 
 module.exports = {
   shelfBook,
